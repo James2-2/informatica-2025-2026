@@ -1,1 +1,0 @@
-alter table studenti add dipartimento varchar(50);

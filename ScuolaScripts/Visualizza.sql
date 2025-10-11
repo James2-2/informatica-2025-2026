@@ -1,1 +1,0 @@
-select * from studenti; -- visualizza gli attributi della tabella
