@@ -1,4 +1,4 @@
-create table studenti(
+create table Studenti(
 	Id_studente int auto_increment primary key, -- incrementa di 1 (auto_increment), auto_increment e primary key sono dei vincoli
 	Nome varchar(50),
 	Cognome varchar(50), -- Si ridimensiona in base a quanto inserisco; char invece è fisso

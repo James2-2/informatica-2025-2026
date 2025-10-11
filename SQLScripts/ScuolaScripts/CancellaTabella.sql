@@ -1,1 +1,1 @@
-drop table studenti;
+drop table Studenti;
