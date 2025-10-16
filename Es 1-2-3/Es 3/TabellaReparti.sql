@@ -1,5 +1,5 @@
-CREATE TABLE reparti (
-    ID_reparto INT PRIMARY KEY,
-    nome_reparto VARCHAR(50) NOT NULL,
-    cod_responsabile INT UNIQUE
+create table reparti (
+    id_reparto int auto_increment primary key,
+    nome_reparto varchar(50) not null,
+    cod_responsabile int unique
 );
