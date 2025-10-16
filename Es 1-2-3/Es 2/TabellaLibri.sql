@@ -1,9 +1,9 @@
-CREATE TABLE libri (
-    isbn VARCHAR(13) PRIMARY KEY,
-    titolo VARCHAR(100) NOT NULL,
-    autore VARCHAR(100) NOT NULL,
-    argomento VARCHAR(50),
-    editore VARCHAR(50),
-    anno INT,
-    edizione INT
+create table libri (
+    isbn char(13) primary key,
+    titolo varchar(50) not null,
+    autore varchar(50) not null,
+    argomento varchar(50),
+    editore varchar(50),
+    anno int,
+    edizione int
 );
