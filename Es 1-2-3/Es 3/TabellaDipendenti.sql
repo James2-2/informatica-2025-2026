@@ -1,10 +1,10 @@
-CREATE TABLE dipendenti (
-    ID_dipendente INT PRIMARY KEY,
-    cognome VARCHAR(50) NOT NULL,
-    nome VARCHAR(50) NOT NULL,
-    data_nascita DATE,
-    cap CHAR(5),
-    citta VARCHAR(50),
-    anzianita INT,
-    id_reparto INT
+create table dipendenti (
+    id_dipendente int auto_increment primary key,
+    cognome varchar(50) not null,
+    nome varchar(50) not null,
+    dataNascita date,
+    cap char(5),
+    citta varchar(50),
+    anzianita int,
+    id_reparto int auto_increment
 );
