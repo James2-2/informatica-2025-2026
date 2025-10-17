@@ -1,0 +1,1 @@
+select first_name from mock_data where id > 900;
