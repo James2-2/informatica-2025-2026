@@ -81,9 +81,3 @@ from pazienti p
 join visite v
 on p.Id_paziente = v.Id_paziente
 where p.nome = "Luca" and p.cognome = "Bianchi";
-
-
-
-
-
-

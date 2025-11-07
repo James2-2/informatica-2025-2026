@@ -1,44 +1,28 @@
--- Funzioni di aggregazione
-select COUNT (*) as totaleClienti -- Conta le persone e rinonima il campo in totale clienti e conta anche i NULL
-from mock_data 
+create table voti(
+	id int primary key auto_increment,
+	cognome varchar(20) not null,
+	nome varchar(20) not null,
+	materia varchar(20) not null,
+	voto decimal (2,1) not null
+);
 
-select count (nome) -- così non conta i NULL
-from studenti; 
+INSERT INTO voti(cognome, nome, materia, voto)
+VALUES('Marchetto', 'Francesco', 'Matematica', 10),
+('Visentini', 'Nicolò', 'Informatica',7),
+('Poli','Alessio','Sistemi', 6),
+('Gianesella','Riccardo','Matematica',4,5),
+('Marchetto', 'Francesco', 'Matematica', 2),
+('Poli','Alessio','Informatica', 9),
+('Gianesella','Riccardo','Storia',4),
+('Visentini', 'Nicolò', 'Italiano',9),
+('Poli','Alessio','Religione', 0),
+('Gianesella','Riccardo','Italiano',8),
+('Poli','Alessio','Tpsit', ),
+('Visentini', 'Nicolò', 'Gpoi',6),
+('Gianesella','Riccardo','Gpoi',5,5),
+('Marchetto', 'Francesco', 'Storia', 1),
+('Marchetto', 'Francesco', 'Italiano', 7);
 
-select count (distinct nome) -- così non conta i duplicati che hanno lo stesso nome
-from studenti;
-
-select count (nome) 
-from studenti 
-WHERE nome = 'Andrea';
-
-select sum(voto) as sommaVoti 
-from studenti;
-
-SELECT sum(voto) AS sommaVoti 
-FROM studenti 
-WHERE nome = 'A%'; -- somma i voti di chi ha il nome che inizia per A
-
-SELECT sum(voto) AS sommaVoti, 
-count (nome) AS totale 
-FROM studenti;
-
-SELECT sum(DISTINCT voto) AS sommaVoti, 
-count (DISTINCT voto) AS totale 
-FROM studenti;
-
-SELECT avg(voto) AS mediaClasse 
-from studenti; -- Average, fa la media
-
-SELECT avg(voto) as mediaVotiAndrea 
-FROM studenti 
-WHERE nome LIKE 'Andrea';
-
-SELECT min(voto) AS votoMinimo 
-FROM studenti;
-
-SELECT max(voto) AS votoMassimo 
-FROM studenti;
 
 SELECT cognome,nome, avg(voto) AS mediaVoti 
 FROM voti
