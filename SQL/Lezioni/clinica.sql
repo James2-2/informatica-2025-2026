@@ -93,3 +93,7 @@ from pazienti p
 left join visite v
 on p.Id_paziente = v.Id_paziente;
 
+select nome, cognome, v.data_visita
+from pazienti p
+right join visite v
+on p.Id_paziente = v.Id_paziente;
