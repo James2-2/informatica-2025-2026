@@ -1,6 +1,6 @@
-CREATE database IF NOT EXISTS clinica;
+create database if not exists giacomo_redi_clinica;
 
-use clinica;
+use giacomo_redi_clinica;
 
 create table pazienti (
 Id_paziente int primary key auto_increment,
@@ -81,3 +81,15 @@ from pazienti p
 join visite v
 on p.Id_paziente = v.Id_paziente
 where p.nome = "Luca" and p.cognome = "Bianchi";
+
+-- Inner join, left join, right join
+
+select nome, cognome, v.data_visita
+from pazienti p
+inner join visite v on p.Id_paziente = v.Id_paziente;
+
+select nome, cognome, v.data_visita
+from pazienti p
+left join visite v
+on p.Id_paziente = v.Id_paziente;
+
