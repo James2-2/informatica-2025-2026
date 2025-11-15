@@ -41,7 +41,7 @@ values ('2024-03-15', 70, 175, 80, 120, 95, 1),
 ('2025-01-09', 59, 160, 100, 150, 99, 1),
 ('2025-02-02', 65, 165, 85, 118, 100, 2),
 ('2025-09-05', 62, 165, 70, 110, 98, 4),
-('2025-03-15', 58, 170, 95, 145, 85, 6);
+('2025-03-15', 58, 170, 95, 145, 85, NULL);
 
 
 select * from pazienti;
@@ -82,11 +82,13 @@ join visite v
 on p.Id_paziente = v.Id_paziente
 where p.nome = "Luca" and p.cognome = "Bianchi";
 
+
 -- Inner join, left join, right join
 
 select nome, cognome, v.data_visita
 from pazienti p
-inner join visite v on p.Id_paziente = v.Id_paziente;
+inner join visite v 
+on p.Id_paziente = v.Id_paziente; -- Inner join è uguale alla join normale
 
 select nome, cognome, v.data_visita
 from pazienti p
@@ -97,3 +99,42 @@ select nome, cognome, v.data_visita
 from pazienti p
 right join visite v
 on p.Id_paziente = v.Id_paziente;
+
+select nome, cognome, v.data_visita
+from pazienti p
+full join visite v -- Non funziona perchè mariaDB non lo implementa
+on p.Id_paziente = v.Id_paziente;
+
+-- Full join
+select nome, cognome, v.data_visita
+from pazienti p
+left join visite v
+on p.Id_paziente = v.Id_paziente
+union
+select nome, cognome, v.data_visita
+from pazienti p
+right join visite v
+on p.Id_paziente = v.Id_paziente;
+
+select count(data_visita) as totaleVisite
+from pazienti p
+right join visite v
+on p.Id_paziente = v.Id_paziente;
+
+-- select count(data_visita) as totaleVisite from visite;
+
+select count(data_visita) as visiteSenzaPaziente 
+from visite 
+where Id_paziente is null;
+
+select count(data_visita) as visiteSenzaPaziente 
+from pazienti p
+right join visite v
+on p.Id_paziente = v.Id_paziente
+where v.Id_paziente is null;
+
+select count(*) as pazientiSenzaVisita 
+from pazienti p
+left join visite v
+on p.Id_paziente = v.Id_paziente
+where data_visita is null;
