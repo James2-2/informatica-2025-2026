@@ -5,3 +5,7 @@ create table autori (
     nome varchar(50) not null,
     citta varchar(50)
 );
+
+insert into autori (cf, cognome, nome, citta)
+values ('09DE23JNDT3Y45DE', 'Machiavelli', 'Nicolò', 'Firenze'),
+('SDSAD12232341234', 'Carducci', 'Giosuè', 'Bologna');
