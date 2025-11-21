@@ -96,4 +96,3 @@ select provincia, count(*) as nPazienti
 from pazienti
 group by provincia
 having nPazienti > 1;
-s
