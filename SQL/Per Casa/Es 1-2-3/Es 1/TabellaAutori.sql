@@ -9,3 +9,7 @@ create table autori (
 insert into autori (cf, cognome, nome, citta)
 values ('09DE23JNDT3Y45DE', 'Machiavelli', 'Nicolò', 'Firenze'),
 ('SDSAD12232341234', 'Carducci', 'Giosuè', 'Bologna');
+
+select * from autori;
+select * from autori where citta in ('Bologna');
+select nome,cognome from autori where citta in ('Firenze');
