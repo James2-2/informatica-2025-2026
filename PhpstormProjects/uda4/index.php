@@ -108,4 +108,124 @@ $studente = [
     "età"=> 18,
     ];
 
-echo $studente["nome"];
+echo "Nome dello studente: ".$studente["nome"];
+
+//TIPI DI VARIABILI
+//SCALARI: INT, STRING
+//COMPOSTE: ARRAY, ARRAY ASSOCIATIVI, OGGETTI
+//PSEUDOVARIABILI: FUNZIONE (CALLBACK)
+
+//STATI DELLE VARIABILI
+//DEFINITE/NON DEFINITE: isset();
+//SETTATE/NON SETTATE: isempty();
+//NULL/DIVERSO DA NULL: isnull();
+
+//FALSY: 0, 0.0, "0", FALSE, "", [], NULL (Non contengono niente)
+//TRUTHY: TRUE, [...] (Contengono qualcosa)
+
+//== LOOSE
+//=== STRICT
+
+$studente["cognome"] = "Bianchi";
+echo "<br>";
+
+foreach ($studente as $chiave => $valore){
+    echo "<br>";
+    echo "$chiave: $valore";
+}
+
+//Array associativo annidato
+echo "<br>";
+echo "<br>";
+echo "Array associativi annidati";
+
+$studenti = [
+    "studente1" =>[
+        "nome" => "Gigi",
+        "voto"=> 7
+    ],
+    "studente2" =>[
+        "nome"=> "Matteo",
+        "voto" => 8
+    ]
+];
+
+echo "<br>";
+echo $studenti["studente2"] ["nome"];
+echo "<br>";
+echo $studenti["studente2"] ["voto"];
+
+$config = [
+    "database" => "mio_db",
+    "utente" => "admin",
+    "password" => "12345"
+];
+
+echo "<br>";
+if(array_key_exists("nome" , $studente))
+    echo "Chiave trovata";
+else
+    echo "Chiave non trovata";
+
+echo "<br>";
+echo "Elenco delle chiavi:  ";
+$chiavi = array_keys($studente);
+var_dump($chiavi); //Mostra l'elenco delle chiavi
+
+echo "<br>";
+echo "Valori all'interno dell'array:  ";
+$valori = array_values($studente);
+var_dump($valori);
+
+echo "<br>";
+echo $valori [1]; //Visualizzo le età
+echo "<br>";
+echo "<br>";
+
+if(array_key_exists("età" , $studente)){
+    echo "Chiave trovata";
+    echo "<br>";
+    echo $studente ["età"];
+}else
+    echo "Chiave non trovata";
+
+$var1 = 5;
+$var2 = "5";
+
+echo "<br>";
+if($var1 == $var2) //Converte la stringa in numero; true
+    echo "Sono uguali";
+else
+    echo "Sono diversi";
+
+echo "<br>";
+if($var1 === $var2) //Non converte; false
+    echo "Sono uguali";
+else
+    echo "Sono diversi";
+
+echo "<br>";
+echo "<br>";
+$a = NULL; //falsy: sono vuoti, esistono e non null (a parte quando uso NULL)
+$a = 0;
+$a = " ";
+$a = [ ];
+$a = "0";
+$a = 0.0;
+
+if(isset($a)) //Restituisce false se la variabile non esiste o è NULL
+    echo "Esiste";
+else
+    echo "Non esiste";
+
+echo "<br>";
+if(is_null($a)) //Restituisce false se la variabile non è NULL
+    echo "La variabile è nulla";
+else
+    echo "La variabile non è nulla";
+
+echo "<br>";
+if(empty($a)) //Restituisce true se la variabile è falsy
+    echo "La variabile è vuota";
+else
+    echo "La variabile non è vuota";
