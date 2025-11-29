@@ -117,10 +117,10 @@ echo "Nome dello studente: ".$studente["nome"];
 
 //STATI DELLE VARIABILI
 //DEFINITE/NON DEFINITE: isset();
-//SETTATE/NON SETTATE: isempty();
+//SETTATE/NON SETTATE: empty();
 //NULL/DIVERSO DA NULL: isnull();
 
-//FALSY: 0, 0.0, "0", FALSE, "", [], NULL (Non contengono niente)
+//FALSY: 0, 0.0, "0", FALSE, " ", [ ], NULL (Non contengono niente)
 //TRUTHY: TRUE, [...] (Contengono qualcosa)
 
 //== LOOSE
