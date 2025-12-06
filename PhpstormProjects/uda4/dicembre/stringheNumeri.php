@@ -11,7 +11,7 @@ echo "Strrev Inverte la stringa: ";
 echo strrev($stringa);
 
 echo "<br>";
-echo ucfirst($stringa); //Mette maiuscola la prima lettera
+echo ucfirst($stringa); //Mette maiuscola solo la prima lettera
 echo "<br>";
 echo ucwords($stringa); //Mette maiuscola la prima lettera di ogni parola
 
