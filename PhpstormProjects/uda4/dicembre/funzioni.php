@@ -61,3 +61,11 @@ echo "<br>";
 echo sommaTotale(1,2,3,4,5);
 echo "<br>";
 echo sommaTotale(1,2,3,4,5,6,7,8,9,10);
+
+//VALORE DI DEFAULT
+function moltiplica(int $a, int $b = 2): int {
+    return $a * $b;
+}
+
+echo moltiplica(5);      // 10
+echo moltiplica(5, 4);   // 20
