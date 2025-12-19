@@ -53,45 +53,67 @@ echo "<br>";
 echo "<br>";
 
 
-
-//NUMERI
+// NUMERI
 $num = -345.234;
-echo abs($num);
+
+echo abs($num);              // Valore assoluto
 echo "<br>";
-echo ceil($num);
+
+echo ceil($num);             // Arrotonda per eccesso
 echo "<br>";
-echo floor($num);
+
+echo floor($num);            // Arrotonda per difetto
 echo "<br>";
-echo round($num);
+
+echo round($num);            // Arrotondamento standard
 echo "<br>";
-echo "Valore random".mt_rand();
+
+echo "Valore random: " . mt_rand();
 echo "<br>";
-echo rand();
+
+echo rand(1, 100);           // Random con range
 echo "<br>";
-echo min($num);
+
+echo min($num, 10, 20);      // min richiede più valori
 echo "<br>";
-echo max($num);
+
+echo max($num, 10, 20);      // max richiede più valori
 echo "<br>";
-echo sqrt($num);
+
+// sqrt e log NON accettano numeri negativi
+echo sqrt(abs($num));
 echo "<br>";
-echo pow($num, 2);
+
+echo pow($num, 2);           // Potenza
 echo "<br>";
-echo intdiv($num, 2);
+
+// intdiv accetta SOLO interi
+echo intdiv((int)$num, 2);
 echo "<br>";
-echo number_format($num);
+
+echo number_format($num, 2, ',', '.');
 echo "<br>";
-echo is_numeric($num);
+
+echo is_numeric($num);       // 1 = true
 echo "<br>";
-echo is_int($num);
+
+echo is_int($num);           // false
 echo "<br>";
-echo is_float($num);
+
+echo is_float($num);         // true
 echo "<br>";
+
 echo intval($num);
 echo "<br>";
+
 echo floatval($num);
 echo "<br>";
+
 echo pi();
 echo "<br>";
-echo log($num);
+
+// log solo su valore positivo
+echo log(abs($num));
 echo "<br>";
-echo exp($num);
+
+echo exp(1);                 // exp di un numero valido
