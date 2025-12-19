@@ -71,3 +71,26 @@ $arrayFrase = explode(" ",$frase); //explode() converte da stringa ad array
 foreach($arrayFrase as $parola){
     echo $parola."<br>";
 }
+
+// Lettura del file riga per riga
+$file = fopen($nomeFile, "r");
+
+$righe = [];
+while (!feof($file)) {
+    $riga = fgets($file);
+    if ($riga !== false) {
+        $righe[] = trim($riga);
+    }
+}
+fclose($file);
+
+/* ---------- file_put_contents() ---------- */
+// Scrittura rapida (aggiunta al file)
+file_put_contents($nomeFile, "\nMySQL", FILE_APPEND);
+
+
+/* ---------- file_get_contents() ---------- */
+// Lettura rapida del file
+$contenuto = file_get_contents($nomeFile);
+echo "Contenuto del file con file_get_contents():<br>";
+echo $contenuto;
