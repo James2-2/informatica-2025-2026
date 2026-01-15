@@ -1,5 +1,5 @@
 <?php
-
+//PHP-1
 //Operatori
 
 $num = 5;
@@ -51,6 +51,28 @@ echo $arrayAssociativo["cognome"];
 
 echo "<br>";
 
-
-
 //Funzioni
+
+$numeri = [10, 20, 30];
+
+$studente = [
+    "nome" => "Bob",
+    "classe" => "5A"
+];
+
+echo "<br>";
+
+$totNumeri = count($numeri);
+echo "<br>";
+
+$esiste = in_array(20, $numeri);
+echo "<br>";
+
+$controllo = isset($studente["nome"]);
+echo "<br>";
+
+$nomeMaiuscolo = strtoupper($studente["nome"]);
+echo "<br>";
+
+print_r($studente);
+echo "<br>";
