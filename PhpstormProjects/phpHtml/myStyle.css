@@ -1,0 +1,10 @@
+body{
+    background-color: sienna;
+}
+
+footer {
+    background-color: #f2f2f2; /* Colore di sfondo */
+    text-align: center;       /* Centra il testo */
+    padding: 20px;            /* Spazio interno */
+    margin-top: 50px;         /* Spazio sopra il footer */
+}
