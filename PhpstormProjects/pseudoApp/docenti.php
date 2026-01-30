@@ -41,7 +41,7 @@ $docenti = [
             <br>
 
             <label>Seleziona docenti:</label><br>
-            <select name="docenti[<?= $i ?>][]" multiple size="5">
+            <select name="docenti[<?= $i ?>][]" multiple>
                 <?php foreach ($docenti as $docente): ?>
                     <option value="<?= $docente ?>"><?= $docente ?></option>
                 <?php endforeach; ?>
@@ -54,4 +54,5 @@ $docenti = [
 </form>
 
 </body>
+
 </html>
