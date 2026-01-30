@@ -1,8 +1,6 @@
 <?php
 $corsi = $_POST["corsi"];
 $docenti = $_POST["docenti"];
-
-$associazioni = [];
 ?>
 
 <!DOCTYPE html>
@@ -33,4 +31,5 @@ $associazioni = [];
 </table>
 
 </body>
+
 </html>
