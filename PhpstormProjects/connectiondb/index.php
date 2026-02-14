@@ -4,6 +4,10 @@ $dbconfig = require "configuration/dbConfiguration.php"; //Porta dentro l'array 
 require "databaseConnection.php";
 $db = databaseConnection::getDB($dbconfig);
 
+if(!isset($db)){
+    exit("Errore nel database");
+}
+
 /*
 //READ
 $query = "select * from studenti";
@@ -88,7 +92,7 @@ try{
     echo "A DB error occured. Please try again later";
 }
 
-
+/*
 $query = "update studenti 
     set media = :media 
     where nome = :nome";
@@ -130,4 +134,4 @@ try{
 }catch (PDOException $e){
     echo "A DB error occured. Please try again later";
 }
-
+*/
