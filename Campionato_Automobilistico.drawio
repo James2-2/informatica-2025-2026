@@ -10,6 +10,9 @@
         <mxCell id="oB1ErxLMOC8ZrRulx0d--2" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Casa automobilistica" vertex="1">
           <mxGeometry height="40" width="120" x="320" y="120" as="geometry" />
         </mxCell>
+        <mxCell id="RYJEUkusPhcD8dC9H9Ej-19" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Gara" vertex="1">
+          <mxGeometry height="40" width="100" x="200" y="210" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
