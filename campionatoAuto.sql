@@ -22,8 +22,11 @@ data date not null
 );
 
 create table partecipazione(
+posizione int,
+punti_ottenuti int,
+tempo_gara varchar(20),
 id_gara int not null,
-id_pilota int,
+id_pilota int not null,
 foreign key(id_gara) references gare(Id_gara),
 foreign key(id_pilota) references piloti(Id_pilota)
 );
