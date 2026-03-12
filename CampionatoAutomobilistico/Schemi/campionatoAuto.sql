@@ -1,0 +1,33 @@
+create table case_automobilistiche(
+Id_casa int primary key,
+nome varchar(20) not null unique,
+colore_livrea varchar(20) not null
+);
+
+create table piloti(
+Id_pilota int primary key,
+nome varchar(20) not null,
+cognome varchar(20) not null,
+numero int not null unique,
+nazionalita varchar(20) not null,
+id_casa int not null,
+foreign key(id_casa) references case_automobilistiche(Id_casa)
+);
+
+create table gare(
+Id_gara int primary key,
+nome_gara varchar(20) not null,
+circuito varchar(20) not null,
+data date not null
+);
+
+create table risultati(
+id_risultato int primary key,
+posizione int not null,
+punti_ottenuti int not null,
+tempo_gara varchar(20),
+id_gara int not null,
+id_pilota int not null,
+foreign key(id_gara) references gare(Id_gara),
+foreign key(id_pilota) references piloti(Id_pilota)
+);
