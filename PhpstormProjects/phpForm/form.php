@@ -43,13 +43,13 @@
     <label>Corsi: </label>
     <br>
     <label for="corsoPHP">Corso PHP </label>
-    <input id="corsoPHP" type="checkbox" name="corsi" value="php">
+    <input type="checkbox" name="corsi[]" value="php">
     <br>
     <label for="corsoJava">Corso Java </label>
-    <input id="corsoJava" type="checkbox" name="corsi" value="java">
+    <input type="checkbox" name="corsi[]" value="java">
     <br>
     <label for="corsoHTML">Corso HTML </label>
-    <input id="corsoHTML" type="checkbox" name="corsi" value="html">
+    <input type="checkbox" name="corsi[]" value="html">
     <br>
     <br>
     <label for="citta">Città di residenza:</label> <!--Dropdown list -->
@@ -67,7 +67,7 @@
     <br>
     <label for="lingua">Lingue conosciute: </label> <!--List box multipla -->
     <br>
-    <select name="lingua" multiple>
+    <select name="lingua[]" multiple>        
         <option value="inglese">Inglese</option>
         <option value="tedesco">Tedesco</option>
         <option value="francese">Francese</option>
