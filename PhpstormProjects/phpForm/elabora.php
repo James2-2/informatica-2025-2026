@@ -8,7 +8,7 @@ $eta = $_POST ["eta"] ?? "";
 $sesso = $_POST ["sesso"] ?? "";
 $corsi = $_POST ["corsi"] ?? [];
 $citta = $_POST ["citta"] ?? "";
-$lingue = $_POST ["lingua"] ?? "";
+$lingue = $_POST["lingua"] ?? [];
 $area = $_POST ["area"] ?? "";
 ?>
 
