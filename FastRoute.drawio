@@ -418,6 +418,9 @@
         <mxCell id="EUQ6R3yXQuuoFGo6rQKF-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;(1;1)&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="385" y="95" as="geometry" />
         </mxCell>
+        <mxCell id="EUQ6R3yXQuuoFGo6rQKF-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;0 in caso sia stato assunto da poco e non ha ancora preso in carico un plico&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="450" y="-30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
