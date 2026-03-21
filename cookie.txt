@@ -1,31 +1,22 @@
 1. Chi salva cosa?
-Hai scritto che il server salva il cookie sul disco fisso. In realtà, il server non può accedere direttamente al tuo computer 
-(per fortuna, sarebbe un enorme rischio di sicurezza!).
-
-Correzione: Il server invia un'istruzione (tramite l'header Set-Cookie). 
+Il server invia un'istruzione (tramite l'header Set-Cookie). 
 È poi il browser (Chrome, Firefox, Safari) che riceve l'istruzione e decide di salvare il file sul tuo dispositivo.
 
 2. La direzione del viaggio
-Questo è l'errore principale nel tuo ragionamento: hai detto che il server rimanda il cookie al client.
-
-Correzione: È l'esatto opposto. Una volta che il cookie è salvato sul tuo computer, 
+Una volta che il cookie è salvato sul tuo computer, 
 ogni volta che visiti di nuovo quel sito, è il tuo browser (client) che spedisce il cookie al server.
 
 Perché? Serve al server per "riconoscerti". Senza quel cookie, il server ti vedrebbe come un perfetto sconosciuto a ogni click.
 
-
-Dominio e Percorso (Path)
-Hai ragione su questo punto! Si può essere molto precisi:
+3. Dominio e Percorso (Path)
 
 Dominio: Il cookie può valere per tutto google.com o solo per un sottodominio come mail.google.com.
 
 Path (Percorso): Puoi decidere che il cookie venga inviato solo se l'utente visita /shop e non se visita /blog.
 
-Un'ultima precisione: Disco fisso o RAM?
+
 Non tutti i cookie finiscono sul disco fisso:
-
 Cookie di sessione: Svaniscono appena chiudi il browser (restano solo nella RAM).
-
 Cookie persistenti: Hanno una data di scadenza e vengono effettivamente scritti sul disco per "sopravvivere" al riavvio del computer.
 
 In sintesi: Il server "emette" il cookie, il browser lo "conserva" e lo "mostra" al server ogni volta che torna a fargli visita.
