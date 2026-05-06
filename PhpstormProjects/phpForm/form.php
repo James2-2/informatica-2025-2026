@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form method="POST" action="elabora.php"> <!--Il metodo è post o get, di default mette get-->
+<form method="post" action="elabora.php"> <!--Il metodo è post o get, di default mette get-->
     <!--Action: dopo aver inviato il form va a prendere l'altro file che gestisce i dati del form-->
 
     <h1>Informazioni</h1>
@@ -43,13 +43,13 @@
     <label>Corsi: </label>
     <br>
     <label for="corsoPHP">Corso PHP </label>
-    <input type="checkbox" name="corsi[]" value="php">
+    <input id="corsoPHP" type="checkbox" name="corsi[]" value="php">
     <br>
     <label for="corsoJava">Corso Java </label>
-    <input type="checkbox" name="corsi[]" value="java">
+    <input id="corsoJava" type="checkbox" name="corsi[]" value="java">
     <br>
     <label for="corsoHTML">Corso HTML </label>
-    <input type="checkbox" name="corsi[]" value="html">
+    <input id="corsoHTML" type="checkbox" name="corsi[]" value="html">
     <br>
     <br>
     <label for="citta">Città di residenza:</label> <!--Dropdown list -->
@@ -67,7 +67,7 @@
     <br>
     <label for="lingua">Lingue conosciute: </label> <!--List box multipla -->
     <br>
-    <select name="lingua[]" multiple>        
+    <select name="lingua[]" multiple>
         <option value="inglese">Inglese</option>
         <option value="tedesco">Tedesco</option>
         <option value="francese">Francese</option>
